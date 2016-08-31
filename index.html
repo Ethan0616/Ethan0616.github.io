@@ -1044,6 +1044,119 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/02/git本地操作/" itemprop="url">
+                  git本地操作
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-02T18:40:36+08:00" content="2016-08-02">
+              2016-08-02
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="git本地操作"><a href="#git本地操作" class="headerlink" title="git本地操作"></a>git本地操作</h2><p>首先在桌面创建一个文件夹：</p>
+<p>mkdir Demo</p>
+<p>进入文件夹</p>
+<p>cd Demo</p>
+<p>在文件夹下创建一个Demo.txt 的文件</p>
+<p>touch Demo.txt</p>
+<p>初始化git仓库</p>
+<p>git init</p>
+<p>git add . </p>
+<p>git commit -m “第一次提交的log”</p>
+<p>接下来详细讲解checkout 和 commit 的区别</p>
+<p>checkout  是从本地的代码仓库 clone一版。</p>
+<p>commit 是将workspace 中想要保存的代码进行提交到本地代码库</p>
+<p>对文件进行编辑 用vi编辑器</p>
+<p>vi Demo.txt </p>
+<p>i进入编辑模式 esc退出 </p>
+<p>wq 保存 新增了一些内容</p>
+<p>git commit -a </p>
+<p>这时候会进入到vi编辑区，i进入编辑模式，第一行为对更改内容进行说明 esc + 大写Q 改为命令模式 然后 wq退出</p>
+<p>git status      查看当前变更项<br>git log          查看提交信息（此信息无回滚）<br>git reflog      查看提交信息（有本地所有操作，可恢复）</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -1085,7 +1198,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

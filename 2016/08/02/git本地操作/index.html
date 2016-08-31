@@ -84,21 +84,52 @@
 
 
 
-<meta name="description" content="Git详解
-图能讲明白，话就不用多说了。">
+<meta name="description" content="git本地操作首先在桌面创建一个文件夹：
+mkdir Demo
+进入文件夹
+cd Demo
+在文件夹下创建一个Demo.txt 的文件
+touch Demo.txt
+初始化git仓库
+git init
+git add . 
+git commit -m “第一次提交的log”
+接下来详细讲解checkout 和 commit 的区别
+checkout  是从本地的代码仓库 clone一版。
+comm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git详解">
-<meta property="og:url" content="http://xmyy.org/2016/08/03/Git详解/index.html">
+<meta property="og:title" content="git本地操作">
+<meta property="og:url" content="http://xmyy.org/2016/08/02/git本地操作/index.html">
 <meta property="og:site_name" content="大葱油饼">
-<meta property="og:description" content="Git详解
-图能讲明白，话就不用多说了。">
-<meta property="og:image" content="http://xmyy.org/2016/08/03/Git详解/git.jpg">
-<meta property="og:updated_time" content="2016-08-15T08:09:20.000Z">
+<meta property="og:description" content="git本地操作首先在桌面创建一个文件夹：
+mkdir Demo
+进入文件夹
+cd Demo
+在文件夹下创建一个Demo.txt 的文件
+touch Demo.txt
+初始化git仓库
+git init
+git add . 
+git commit -m “第一次提交的log”
+接下来详细讲解checkout 和 commit 的区别
+checkout  是从本地的代码仓库 clone一版。
+comm">
+<meta property="og:updated_time" content="2016-08-31T06:29:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git详解">
-<meta name="twitter:description" content="Git详解
-图能讲明白，话就不用多说了。">
-<meta name="twitter:image" content="http://xmyy.org/2016/08/03/Git详解/git.jpg">
+<meta name="twitter:title" content="git本地操作">
+<meta name="twitter:description" content="git本地操作首先在桌面创建一个文件夹：
+mkdir Demo
+进入文件夹
+cd Demo
+在文件夹下创建一个Demo.txt 的文件
+touch Demo.txt
+初始化git仓库
+git init
+git add . 
+git commit -m “第一次提交的log”
+接下来详细讲解checkout 和 commit 的区别
+checkout  是从本地的代码仓库 clone一版。
+comm">
 
 
 
@@ -119,9 +150,9 @@
 
 
 
-  <link rel="canonical" href="http://xmyy.org/2016/08/03/Git详解/"/>
+  <link rel="canonical" href="http://xmyy.org/2016/08/02/git本地操作/"/>
 
-  <title> Git详解 | 大葱油饼 </title>
+  <title> git本地操作 | 大葱油饼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -261,7 +292,7 @@
             
             
               
-                Git详解
+                git本地操作
               
             
           </h1>
@@ -273,8 +304,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-03T16:42:18+08:00" content="2016-08-03">
-              2016-08-03
+            <time itemprop="dateCreated" datetime="2016-08-02T18:40:36+08:00" content="2016-08-02">
+              2016-08-02
             </time>
           </span>
 
@@ -301,8 +332,27 @@
       
 
       
-        <h2 id="Git详解"><a href="#Git详解" class="headerlink" title="Git详解"></a>Git详解</h2><img src="/2016/08/03/Git详解/git.jpg" alt="git命令" title="git命令">
-<h2 id="图能讲明白，话就不用多说了。"><a href="#图能讲明白，话就不用多说了。" class="headerlink" title="图能讲明白，话就不用多说了。"></a>图能讲明白，话就不用多说了。</h2>
+        <h2 id="git本地操作"><a href="#git本地操作" class="headerlink" title="git本地操作"></a>git本地操作</h2><p>首先在桌面创建一个文件夹：</p>
+<p>mkdir Demo</p>
+<p>进入文件夹</p>
+<p>cd Demo</p>
+<p>在文件夹下创建一个Demo.txt 的文件</p>
+<p>touch Demo.txt</p>
+<p>初始化git仓库</p>
+<p>git init</p>
+<p>git add . </p>
+<p>git commit -m “第一次提交的log”</p>
+<p>接下来详细讲解checkout 和 commit 的区别</p>
+<p>checkout  是从本地的代码仓库 clone一版。</p>
+<p>commit 是将workspace 中想要保存的代码进行提交到本地代码库</p>
+<p>对文件进行编辑 用vi编辑器</p>
+<p>vi Demo.txt </p>
+<p>i进入编辑模式 esc退出 </p>
+<p>wq 保存 新增了一些内容</p>
+<p>git commit -a </p>
+<p>这时候会进入到vi编辑区，i进入编辑模式，第一行为对更改内容进行说明 esc + 大写Q 改为命令模式 然后 wq退出</p>
+<p>git status      查看当前变更项<br>git log          查看提交信息（此信息无回滚）<br>git reflog      查看提交信息（有本地所有操作，可恢复）</p>
+
       
     </div>
 
@@ -326,16 +376,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/02/git本地操作/" rel="next" title="git本地操作">
-                <i class="fa fa-chevron-left"></i> git本地操作
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/15/网页归纳/" rel="prev" title="网页归纳">
-                网页归纳 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/08/03/Git详解/" rel="prev" title="Git详解">
+                Git详解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -436,7 +482,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git详解"><span class="nav-number">1.</span> <span class="nav-text">Git详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图能讲明白，话就不用多说了。"><span class="nav-number">2.</span> <span class="nav-text">图能讲明白，话就不用多说了。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git本地操作"><span class="nav-number">1.</span> <span class="nav-text">git本地操作</span></a></li></ol></div>
             
           </div>
         </section>
