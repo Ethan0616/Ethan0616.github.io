@@ -1,0 +1,675 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="15分钟看懂PHP语法学习（一）#######此文章为个人对http://www.w3school.com.cn  的学习整理
+
+基础语法
+
+开头结尾PHP脚本以  “&amp;lt;?php “  开头以  “?&amp;gt;”    结尾
+12345678910111213&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;&amp;lt;?php// 这个是注释  ; #这个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="15分钟看懂PHP">
+<meta property="og:url" content="http://xmyy.org/2016/08/31/15分钟看懂PHP/index.html">
+<meta property="og:site_name" content="大葱油饼">
+<meta property="og:description" content="15分钟看懂PHP语法学习（一）#######此文章为个人对http://www.w3school.com.cn  的学习整理
+
+基础语法
+
+开头结尾PHP脚本以  “&amp;lt;?php “  开头以  “?&amp;gt;”    结尾
+12345678910111213&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;&amp;lt;?php// 这个是注释  ; #这个">
+<meta property="og:updated_time" content="2016-08-31T06:22:01.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="15分钟看懂PHP">
+<meta name="twitter:description" content="15分钟看懂PHP语法学习（一）#######此文章为个人对http://www.w3school.com.cn  的学习整理
+
+基础语法
+
+开头结尾PHP脚本以  “&amp;lt;?php “  开头以  “?&amp;gt;”    结尾
+12345678910111213&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;&amp;lt;?php// 这个是注释  ; #这个">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://xmyy.org/2016/08/31/15分钟看懂PHP/"/>
+
+  <title> 15分钟看懂PHP | 大葱油饼 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0102b663d044ac33f7fbefd224ac1aa8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">大葱油饼</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">煎饼大葱我最爱！</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                15分钟看懂PHP
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-31T14:11:06+08:00" content="2016-08-31">
+              2016-08-31
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="15分钟看懂PHP"><a href="#15分钟看懂PHP" class="headerlink" title="15分钟看懂PHP"></a>15分钟看懂PHP</h2><h1 id="语法学习（一）"><a href="#语法学习（一）" class="headerlink" title="语法学习（一）"></a>语法学习（一）</h1><p>#######此文章为个人对<a href="http://www.w3school.com.cn" target="_blank" rel="external">http://www.w3school.com.cn</a>  的学习整理</p>
+<ul>
+<li>基础语法</li>
+</ul>
+<h4 id="开头结尾"><a href="#开头结尾" class="headerlink" title="开头结尾"></a>开头结尾</h4><p>PHP脚本以  “&lt;?php “  开头<br>以  “?&gt;”    结尾</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;?php</div><div class="line">// 这个是注释  ;</div><div class="line"></div><div class="line"> #这个也是注释</div><div class="line">/***</div><div class="line">这个是多行注释</div><div class="line">*/</div><div class="line">?&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h4 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h4><p>常量一旦被定义，就无法再更改<br>常量如何定义：常量名称前面没有$符号，常冠以字符串或下划线开头。常量与变量不同，其作用域贯穿整个脚本，自动全局。</p>
+<ul>
+<li>实例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">define(&quot;varName&quot;,&quot;我是内容&quot;);</div><div class="line">echo varName; // &lt;-- 常量名称</div></pre></td></tr></table></figure>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><ul>
+<li>变量命名：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">变量要以 “$”开头</div><div class="line">&lt;?php $x=5; $y=6 ; $z=$x +$y; echo $z  ?&gt;</div><div class="line"> 输出： 11</div></pre></td></tr></table></figure>
+<ul>
+<li>变量规则：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.变量以$符号开头，其后是变量的名称</div><div class="line">2.变量名称必须以字母或下划线开头</div><div class="line">3.变量名不能以数字开头</div><div class="line">4.变量名称只能包含字母数字字符和下划线（A-z、0-9 以及 _）</div><div class="line">5.变量名对大小写敏感（$y 与$Y 是两个不同的变量）</div></pre></td></tr></table></figure>
+<h6 id="大小写敏感"><a href="#大小写敏感" class="headerlink" title="大小写敏感"></a>大小写敏感</h6><ul>
+<li>不敏感的有： 关键字、类名、函数名</li>
+<li>敏感： 所有的变量都区分大小写</li>
+</ul>
+<ul>
+<li>变量的作用域<br>1.内外有严格的界限，属于内部（local）的变量外部不能访问<br>2.属于外部（global）的变量，内部也不能访问<br>3，static 关键字的作用：当函数运行结束后，所有变量都将被释放。当需要变量不随函数消失，就需要在声明变量前加上 static 关键字。<br>4.在局部沿用全局变量  $GLOBALS[‘变量名’] ； 声明全局变量  global $y </li>
+</ul>
+<ul>
+<li>其他：</li>
+</ul>
+<ol>
+<li>变量创建时间：首次赋值的时候被创建</li>
+<li>文本需要用引号包上</li>
+<li>无需告诉变量的类型，php会根据其值自动把变量转换为正确的数据类型 </li>
+</ol>
+<h4 id="输出语句"><a href="#输出语句" class="headerlink" title="输出语句"></a>输出语句</h4><p>echo &amp; print<br>echo - 能够输出一个以上的字符串 ，速度快（因为没有返回值） 书写 echo ， echo() 均可<br>print - 只能输出一个字符串，并始终返回1</p>
+<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><h6 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h6><p>$x = “Hello PHP!”; // 引号括住的地方<br>$y = ‘Hello PHP’;   // 单引号也可以</p>
+<p>// 计算字符串长度 strlen()函数<br>echo strlen(“Hello PHP!”);<br>// 检索字符串匹配的字符位置，如果未找到返回 FALSE<br>echo strips(“Hello PHP”,”PHP”);<br>更多字符串处理 <a href="http://www.w3school.com.cn/php/php_ref_string.asp" target="_blank" rel="external">http://www.w3school.com.cn/php/php_ref_string.asp/</a></p>
+<ul>
+<li><h6 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h6><p>var_dump() 会返回变量的数据类型和值<br>$x = 5985;<br>$x = -345; // 负数<br>$x = 0x8C; // 十六进制数<br>$x = 047; // 八进制数</p>
+</li>
+<li><h6 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h6><p>$x = 10.365;<br>$x = 2.4e3;<br>$x = 8E-5;</p>
+</li>
+<li><h6 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h6><p>$x=true;<br>$y=false;</p>
+</li>
+<li><h6 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h6><p>$cars=array(“Volvo”,”BMW”,”SB”);<br>$ss=array(“BMW”,”Volvo”,”SB”)；<br>cars==ss; // 返回true<br>cars===ss; // 返回 false ,顺序相同，返回true</p>
+</li>
+</ul>
+<p>只适用于数组的遍历方式： foreach遍历<br>$colors = array(“red”,”green”,”blue”,”yellow”);<br>foreach ($colors as $value) {<br>  echo “$value <br>“;<br>}</p>
+<p>数组长度： echo count($cars)</p>
+<p>关联数组： 数组中的每个元素是一对 键值对</p>
+<p>初始化关联数组：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$age=array(&quot;Peter&quot;=&gt;&quot;35&quot;,&quot;Ethan&quot;=&gt;&quot;37&quot;,&quot;MOla&quot;=&gt;&quot;18&quot;)</div><div class="line">或者：</div><div class="line">$age[&apos;Peter&apos;]=&quot;35&quot;;</div><div class="line">$age[&apos;Ethan&apos;]=&quot;37&quot;;</div><div class="line">$age[&apos;Mola&apos;]=&quot;18&quot;;</div></pre></td></tr></table></figure>
+<p>遍历方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">foreach($age as $x=&gt;$x_value) &#123;</div><div class="line">  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>sort() - 以升序对数组排序</li>
+<li>rsort() - 以降序对数组排序</li>
+<li>asort() - 根据值，以升序对关联数组进行排序</li>
+<li>ksort() - 根据键，以升序对关联数组进行排序</li>
+<li>arsort() - 根据值，以降序对关联数组进行排序</li>
+<li>krsort() - 根据键，以降序对关联数组进行排序</li>
+</ul>
+<p>更多数组操作，详见 <a href="http://www.w3school.com.cn/php/php_ref_array.asp" target="_blank" rel="external">http://www.w3school.com.cn/php/php_ref_array.asp/</a></p>
+<ul>
+<li><h6 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h6><p>&lt;?php<br>class Car<br>{<br>var $color;<br>function Car($color=”green”) {<br>  $this-&gt;color = $color;<br>}<br>function what_color() {<br>  return $this-&gt;color;<br> }<br>}<br>?&gt;</p>
+</li>
+<li><h6 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h6><p>NULL 表示变量无值，通过把值改为NULL将变量清空；<br>&lt;?php<br>$x=”Hello world!”;<br>$x=null;<br>var_dump($x);<br>?&gt;</p>
+</li>
+</ul>
+<h6 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h6><p>声明： 以“function”开头，命名规则同变量。<br>例如：<br>function functionName($height=50){<br>    echo “这是个函数 height = $height” ;<br>return NULL；<br>}</p>
+<p>调用方法：<br>functionName(); // 当不传递参数时，使用默认值</p>
+<h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><ul>
+<li>常见运算符 + 、 - 、 * 、 / 、 %</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$x=10; </div><div class="line">$y=6;</div><div class="line">echo ($x + $y); // 输出 16</div><div class="line">echo ($x - $y); // 输出 4</div><div class="line">echo ($x * $y); // 输出 60</div><div class="line">echo ($x / $y); // 输出 1.6666666666667</div><div class="line">echo ($x % $y); // 输出 4</div></pre></td></tr></table></figure>
+<ul>
+<li><p>赋值运算符<br>从右向左赋值     $x=10； echo $x;  // 10</p>
+</li>
+<li><p>字符串运算符</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$a = &quot;Hello&quot;;</div><div class="line">$b = $a . &quot; world!&quot;;</div><div class="line">echo $b; // 输出 Hello world!</div><div class="line">&gt;$x=&quot;Hello&quot;;</div><div class="line">$x .= &quot; world!&quot;;</div><div class="line">echo $x; // 输出 Hello world!</div></pre></td></tr></table></figure>
+<ul>
+<li>PHP 递增/递减运算符  规则同C</li>
+<li>比较运算符</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">【 ===】	全等（完全相同）	$x === $y	如果 $x 等于 $y，且它们类型相同，则返回 true。</div><div class="line">【&lt;&gt;】	不等于	$x &lt;&gt; $y	如果 $x 不等于 $y，则返回 true。</div><div class="line">【!==】	不全等（完全不同）	$x !== $y	如果 $x 不等于 $y，且它们类型不相同，则返回 true。</div></pre></td></tr></table></figure>
+<ul>
+<li>逻辑运算符</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">and	与	$x and $y	如果 $x 和 $y 都为 true，则返回 true。</div><div class="line">or	或	$x or $y	如果 $x 和 $y 至少有一个为 true，则返回 true。</div><div class="line">xor	异或	$x xor $y	如果 $x 和 $y 有且仅有一个为 true，则返回 true。</div></pre></td></tr></table></figure>
+<ul>
+<li>条件控制语句<br>if…else…elseif 语句 注意 elseif连写<br>其他同C一致</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/17/从零开始Swift/" rel="next" title="从零开始Swift">
+                <i class="fa fa-chevron-left"></i> 从零开始Swift
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/Aiden.jpg"
+               alt="大葱油饼" />
+          <p class="site-author-name" itemprop="name">大葱油饼</p>
+          <p class="site-description motion-element" itemprop="description">用生命在吃。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#15分钟看懂PHP"><span class="nav-number">1.</span> <span class="nav-text">15分钟看懂PHP</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语法学习（一）"><span class="nav-number"></span> <span class="nav-text">语法学习（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开头结尾"><span class="nav-number">0.0.1.</span> <span class="nav-text">开头结尾</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常量"><span class="nav-number">0.0.2.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量"><span class="nav-number">0.0.3.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#大小写敏感"><span class="nav-number">0.0.3.0.1.</span> <span class="nav-text">大小写敏感</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出语句"><span class="nav-number">0.0.4.</span> <span class="nav-text">输出语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型"><span class="nav-number">0.0.5.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#字符串"><span class="nav-number">0.0.5.0.1.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#整数"><span class="nav-number">0.0.5.0.2.</span> <span class="nav-text">整数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#浮点数"><span class="nav-number">0.0.5.0.3.</span> <span class="nav-text">浮点数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#逻辑"><span class="nav-number">0.0.5.0.4.</span> <span class="nav-text">逻辑</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#数组"><span class="nav-number">0.0.5.0.5.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#对象"><span class="nav-number">0.0.5.0.6.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#NULL"><span class="nav-number">0.0.5.0.7.</span> <span class="nav-text">NULL</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#函数"><span class="nav-number">0.0.5.0.8.</span> <span class="nav-text">函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运算符"><span class="nav-number">0.0.6.</span> <span class="nav-text">运算符</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">大葱油饼</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
