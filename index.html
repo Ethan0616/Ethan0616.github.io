@@ -1260,6 +1260,112 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/20/Shell删除重复图片/" itemprop="url">
+                  Shell删除重复图片
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-20T17:14:13+08:00" content="2016-03-20">
+              2016-03-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Shell删除重复图片"><a href="#Shell删除重复图片" class="headerlink" title="Shell删除重复图片"></a>Shell删除重复图片</h2><h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>平时不怎么用Mac上的照片功能</p>
+<img src="/2016/03/20/Shell删除重复图片/photo.png" alt="都是产品惹的祸" title="都是产品惹的祸">
+<p>我想全选然后放到指定的目录<br>不小心就点了下面这个键</p>
+<img src="/2016/03/20/Shell删除重复图片/copy.png" alt="都是产品惹的祸" title="都是产品惹的祸">
+<p>悲剧来了，结果就复制了一堆后缀名带(1).jpg的图片<br><img src="/2016/03/20/Shell删除重复图片/jpg.png" alt="都是产品惹的祸" title="都是产品惹的祸"></p>
+<h3 id="接下来说怎么解决"><a href="#接下来说怎么解决" class="headerlink" title="接下来说怎么解决"></a>接下来说怎么解决</h3><ul>
+<li>第一步，其实方法很简单，把所有文件都拖入一个目录（这里是copy一份，留一个后手，要是删错了，可以把整个文件都删掉，本来就是复制的嘛！）</li>
+<li>第二部，打开终端 cd + 把文件拖入终端 然后回车。</li>
+<li>第三部，在终端中输入命令：find . -name “*(1).jpg” 命令的作用，查看指定后缀的文件 </li>
+<li>第四部，删除 ： find . -name “*(1).jpg” -exec rm {} \; </li>
+</ul>
+<p>这里解释一下命令的意思：</p>
+<p>find（【查找】） .（【当前目录下】） -name（【文件名为】） “*(3).jpg”（【以(1).jpg为后缀的所有文件】） -exec（【执行】） rm（【删除】） {}（【将前面找到的文件传入到这里当参数】） \;(【命令结束符号】)</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -1301,7 +1407,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
