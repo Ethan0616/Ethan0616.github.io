@@ -302,7 +302,7 @@
       
         
           
-            <h2 id="旧项目迁移"><a href="#旧项目迁移" class="headerlink" title="旧项目迁移"></a>旧项目迁移</h2><h4 id="由于语法变更，再一次将github上的Swift项目进行整理。"><a href="#由于语法变更，再一次将github上的Swift项目进行整理。" class="headerlink" title="由于语法变更，再一次将github上的Swift项目进行整理。"></a>由于语法变更，再一次将github上的Swift项目进行整理。</h4><h4 id="这一次将两个项目合并为一个项目，整理后的代码遇到下图的问题。"><a href="#这一次将两个项目合并为一个项目，整理后的代码遇到下图的问题。" class="headerlink" title="这一次将两个项目合并为一个项目，整理后的代码遇到下图的问题。"></a>这一次将两个项目合并为一个项目，整理后的代码遇到下图的问题。</h4>
+            <h2 id="旧项目迁移"><a href="#旧项目迁移" class="headerlink" title="旧项目迁移"></a>旧项目迁移</h2><h4 id="由于语法变更，再一次将github上的Swift项目进行整理。"><a href="#由于语法变更，再一次将github上的Swift项目进行整理。" class="headerlink" title="由于语法变更，再一次将github上的Swift项目进行整理。"></a>由于语法变更，再一次将github上的Swift项目进行整理。</h4><h4 id="这一次将两个项目合并为一个项目，整理后的代码遇到下图的问题。"><a href="#这一次将两个项目合并为一个项目，整理后的代码遇到下图的问题。" class="headerlink" title="这一次将两个项目合并为一个项目，整理后的代码遇到下图的问题。"></a>这一次将两个项目合并为一个项目，整理后的代码遇到下图的问题。</h4><img src="/2017/01/07/旧项目迁移/issues.png" alt="问题如图" title="问题如图">
 <p>问题原因，是因为git之前已经添加的类由于变更了路径，找不到了。<br>问题处理：<br>    终端进入项目根目录，输入命令：git add -A .</p>
 <pre><code>上面的命令仅限于，代码库变更，如有添加新的内容，不想上传。在 .gitignore文件中需要添加忽略的文件夹的名称。
 </code></pre>
