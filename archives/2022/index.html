@@ -431,19 +431,60 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Ethan0616.github.io/2022/02/06/reios02/">
+                
+                <span class="abstract-title-text">越狱开发原理（二）注入重签名</span>
+            </a>
+            <div class="abstract-content">
+                Mach-O  LC_LOAD_DYLIB Hook的方式：利用Mach-O文件加载的方式，注入dylib文件，使其启动时加载我们新建的dylib文件，向未越狱App中注入.dylib 
+
+完整流程：
+1. 撰写注入程序，.dylib 动态库参考内存编辑器篇文章
+2. 获取脱壳 IPA2.1 直接下载已脱壳ipa如果没有越狱设备，可以用这个网址下载，9块钱一次。连接
+2.2 下载未脱壳ipa ，手动脱壳应用Apple configurator2 提取 ipa，App Store下载即可。使用连接
+12// 这个路径下 取到ipa包~/Library/Group Containers/K3...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/02/06">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/02/06</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="reios">reios</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Ethan0616.github.io/2022/02/06/reios01/">
                 
                 <span class="abstract-title-text">逆向开发（一）修改进程内存</span>
             </a>
             <div class="abstract-content">
-                逆向开发（一）修改进程内存1. 原理当执行文件由操作系统运行时，就成为一个进程。实际上可执行文件和处理同一个对象的不同状态，即一些数据和一组指令。我们可以将可执行文件视为静态，将进程视为动态。可执行文件在硬盘上，而进程“存储”在内存中。所以，进程包含数据和指令它们在内存中。
+                1. 原理当执行文件由操作系统运行时，就成为一个进程。实际上可执行文件和处理同一个对象的不同状态，即一些数据和一组指令。我们可以将可执行文件视为静态，将进程视为动态。可执行文件在硬盘上，而进程“存储”在内存中。所以，进程包含数据和指令它们在内存中。
 
 优点： 能够及时反馈修改情况
 缺点： 不能保存修改信息，应用重新加载后修改消失
 
 
 2. 虚拟内存、内存页和内存区域当操作系统执行一个可执行文件时，它会将这个可执行文件从硬盘加载到内存中。这个进程在内存中的哪个位置？
-每个进程都有自己独立的内存空间（即进程A与B运行在不同的内存区域），这是通过内存虚拟化来实现的。大...
+每个进程都有自己独立的内存空间（即进程A与B运行在不同的内存区域），这是通过内存虚拟化来实现的。大部分操作系统都是基于虚拟内...
             </div>
             <!-- read more -->
             
@@ -578,14 +619,21 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
     
     
     
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 1
+        Total : 2
         </div>
         <!-- search  -->
         
@@ -603,6 +651,12 @@
         <li class="archive-post-item">
             <span class="archive-post-date">02/06</span>
             <a class="archive-post-title" href="/Ethan0616.github.io/2022/02/06/reios01/">逆向开发（一）修改进程内存</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/06</span>
+            <a class="archive-post-title" href="/Ethan0616.github.io/2022/02/06/reios02/">越狱开发原理（二）注入重签名</a>
         </li>
     
     </div>
