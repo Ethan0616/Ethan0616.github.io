@@ -446,9 +446,95 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Ethan0616.github.io/2022/02/06/reios04/">
+                
+                <span class="abstract-title-text">iOS逆向开发（四）ARM64汇编</span>
+            </a>
+            <div class="abstract-content">
+                
+寄存器
+指令
+堆栈
+中断 （不重要）
+
+
+通用寄存器64bit: x0~x28  共有29个寄存器 一个寄存器8个字节
+可在代码中内嵌汇编代码
+汇编的注释 -&gt;  ;x0 通常拿来存放函数的返回值x0 ~ x7 通常拿来存放函数的参数，更多的参数使用堆栈来传递cmp 指令 compare  比较的意思，将两个参数相减，相减的结果放在cpsr寄存器中程序状态寄存器: cpsr、spsrcpsr : Current Program Status Registerspsr:  Saved Program Status Register (异常状态下使用)
+cpsr
+b 跳转指令
+
+b ...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/02/06">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/02/06</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="reios">reios</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Ethan0616.github.io/2022/02/06/reios03/">
+                
+                <span class="abstract-title-text">iOS逆向开发（三）ASLR</span>
+            </a>
+            <div class="abstract-content">
+                1. ASLRAddress Space Layout Randomization,地址空间布局随机化iOS4.3开始引入ASLR技术
+2. 原理： 是一种针对缓冲区移除的安全保护技术，通过对堆栈、共享库映射等线性区布局的随机化，通过增加攻击者预测目的地址的难度，防止攻击者直接定位攻击代码位置，达到阻止溢出攻击的目的的一种技术。
+3. 二进制文件分析分析工具 ： hopper Disassembler 
+4. Mach-O 载入内存中数据分区RawData 存放两部分： __TEXT、__DATAVM Address: Virtual Memory Address 内存地址，开始位置VM...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/02/06">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/02/06</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="reios">reios</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Ethan0616.github.io/2022/02/06/reios02/">
                 
-                <span class="abstract-title-text">越狱开发原理（二）注入重签名</span>
+                <span class="abstract-title-text">iOS逆向开发（二）注入重签名</span>
             </a>
             <div class="abstract-content">
                 Mach-O  LC_LOAD_DYLIB Hook的方式：利用Mach-O文件加载的方式，注入dylib文件，使其启动时加载我们新建的dylib文件，向未越狱App中注入.dylib 
@@ -489,7 +575,7 @@
         <article class="index-post">
             <a class="abstract-title" href="/Ethan0616.github.io/2022/02/06/reios01/">
                 
-                <span class="abstract-title-text">逆向开发（一）修改进程内存</span>
+                <span class="abstract-title-text">iOS逆向开发（一）修改进程内存</span>
             </a>
             <div class="abstract-content">
                 1. 原理当执行文件由操作系统运行时，就成为一个进程。实际上可执行文件和处理同一个对象的不同状态，即一些数据和一组指令。我们可以将可执行文件视为静态，将进程视为动态。可执行文件在硬盘上，而进程“存储”在内存中。所以，进程包含数据和指令它们在内存中。
@@ -728,7 +814,27 @@
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
     
@@ -737,7 +843,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 4
         </div>
         <!-- search  -->
         
@@ -754,13 +860,25 @@
         
         <li class="archive-post-item">
             <span class="archive-post-date">02/06</span>
-            <a class="archive-post-title" href="/Ethan0616.github.io/2022/02/06/reios01/">逆向开发（一）修改进程内存</a>
+            <a class="archive-post-title" href="/Ethan0616.github.io/2022/02/06/reios03/">iOS逆向开发（三）ASLR</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">02/06</span>
-            <a class="archive-post-title" href="/Ethan0616.github.io/2022/02/06/reios02/">越狱开发原理（二）注入重签名</a>
+            <a class="archive-post-title" href="/Ethan0616.github.io/2022/02/06/reios04/">iOS逆向开发（四）ARM64汇编</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/06</span>
+            <a class="archive-post-title" href="/Ethan0616.github.io/2022/02/06/reios01/">iOS逆向开发（一）修改进程内存</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/06</span>
+            <a class="archive-post-title" href="/Ethan0616.github.io/2022/02/06/reios02/">iOS逆向开发（二）注入重签名</a>
         </li>
     
     </div>
