@@ -431,6 +431,177 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Ethan0616.github.io/2022/02/06/reios08/">
+                
+                <span class="abstract-title-text">iOS逆向开发（八）LLDB 动态调试</span>
+            </a>
+            <div class="abstract-content">
+                环境搭建：
+将手机中的debugserver 拷贝到电脑scp &#x72;&#x6f;&#111;&#x74;&#x40;&#49;&#57;&#50;&#x2e;&#x31;&#54;&#x38;&#x2e;&#x33;&#x31;&#46;&#x32;&#48;&#48;:/Developer/usr/bin/debugserver ~/Desktop/debugserver
+
+导出原有权限ldid -e debugserver &gt; debugserver.entitlements
+
+需要给予更高权限 
+
+
+
+get-task-allow
+task_for_pid-allow...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/02/06">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/02/06</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="reios">reios</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Ethan0616.github.io/2022/02/06/reios07/">
+                
+                <span class="abstract-title-text">iOS逆向开发（七）脱壳过程</span>
+            </a>
+            <div class="abstract-content">
+                三种加壳方式
+VM  壳
+加密 壳
+压缩 壳
+
+三种脱壳方式：目前用第三种
+Clutch原理：posix_spawnp创建进程然后dump直接生成ipa包在设备，可以说是很方便了。这个是工具在使用的时候大部分应用会出报错，此外生成的包还需要自己拷贝。
+dumpdecrypted地址： https://github.com/stefanesser/dumpdecrypted原理： 通过手动注入然后启动应用程序在内存进行dump解密后的内存实现砸壳，这种砸壳只能砸主App可执行文件。有动态库不行对于应用程序里面存在framework的情况可以使用conradev的https://github...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/02/06">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/02/06</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="reios">reios</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Ethan0616.github.io/2022/02/06/reios06/">
+                
+                <span class="abstract-title-text">iOS逆向开发（六）Theos 使用</span>
+            </a>
+            <div class="abstract-content">
+                1. 下载**git clone –recursive https://github.com/theos/theos.git**ssl 443git config –global –unset http.proxygit config –global –unset https.proxy
+2. 修改环境变量：
+make 不成功 https://www.cnblogs.com/fply/p/8476242.html
+3. 命令：nic.pl
+编译： make打包： make package打包后会有个文件夹 packages 里面会有deb文件，是越狱设备的插件，能直接运行在越狱设备上。
+...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/02/06">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/02/06</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="reios">reios</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Ethan0616.github.io/2022/02/06/reios05/">
+                
+                <span class="abstract-title-text">iOS逆向开发（五）工具篇</span>
+            </a>
+            <div class="abstract-content">
+                
+软件安装
+如果Cydia下载不了，可以在网上下载后 借用ifunbox手动拖入到到沙盒的目录中安装
+越狱后安装补丁、插件
+ cycript 调试工具
+ class-dump 
+ Reveal  手机、Mac均安装
+
+class-dump 常用方法：赋予 class-dump权限   chmod +x class-dump-H表示要生成头文件-o用于制定头文件的存放目录
+OpenSSL 免密码登录SSL 是一种传输安全协议。SSH 是 建立连接的通道，基于安全协议防止中间人攻击。ssh-copy-id &#114;&#x6f;&#111;&#x74;&#x40;&#49;&#x39;&#...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/02/06">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/02/06</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="reios">reios</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Ethan0616.github.io/2022/02/06/reios04/">
                 
                 <span class="abstract-title-text">iOS逆向开发（四）ARM64汇编</span>
@@ -720,7 +891,47 @@ b ...
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -739,7 +950,7 @@ b ...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 4
+        Total : 8
         </div>
         <!-- search  -->
         
@@ -753,6 +964,12 @@ b ...
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/06</span>
+            <a class="archive-post-title" href="/Ethan0616.github.io/2022/02/06/reios07/">iOS逆向开发（七）脱壳过程</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">02/06</span>
@@ -775,6 +992,51 @@ b ...
         <li class="archive-post-item">
             <span class="archive-post-date">02/06</span>
             <a class="archive-post-title" href="/Ethan0616.github.io/2022/02/06/reios02/">iOS逆向开发（二）注入重签名</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Ethan0616.github.io/2022/02/06/reios05/">iOS逆向开发（五）工具篇</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Ethan0616.github.io/2022/02/06/reios06/">iOS逆向开发（六）Theos 使用</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Ethan0616.github.io/2022/02/06/reios08/">iOS逆向开发（八）LLDB 动态调试</a>
         </li>
     
     </div>
