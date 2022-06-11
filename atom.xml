@@ -6,7 +6,7 @@
   <link href="https://ethan0616.github.io/Ethan0616.github.io/atom.xml" rel="self"/>
   
   <link href="https://ethan0616.github.io/Ethan0616.github.io/"/>
-  <updated>2022-06-10T23:41:25.226Z</updated>
+  <updated>2022-06-11T00:00:04.116Z</updated>
   <id>https://ethan0616.github.io/Ethan0616.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FFmpeg安装</title>
+    <link href="https://ethan0616.github.io/Ethan0616.github.io/2022/06/11/FFmpeg%E5%AE%89%E8%A3%85/"/>
+    <id>https://ethan0616.github.io/Ethan0616.github.io/2022/06/11/FFmpeg%E5%AE%89%E8%A3%85/</id>
+    <published>2022-06-10T23:56:39.000Z</published>
+    <updated>2022-06-11T00:00:04.116Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="M1芯片-Mac-下载安装-FFmpeg"><a href="#M1芯片-Mac-下载安装-FFmpeg" class="headerlink" title="M1芯片 Mac 下载安装 FFmpeg"></a>M1芯片 Mac 下载安装 FFmpeg</h1><h3 id="两种下载方式"><a href="#两种下载方式" class="headerlink" title="两种下载方式"></a>两种下载方式</h3><ol><li>Homebrew 下载 ，终端输入 brew install  ffmpeg，可参照如下连接方式：<a href="https://www.cnblogs.com/mjios/p/14482571.html#4830778">https://www.cnblogs.com/mjios/p/14482571.html#4830778</a></li><li>github连接下载 ， 下载地址 <a href="https://git.ffmpeg.org/ffmpeg.git">https://git.ffmpeg.org/ffmpeg.git</a> </li></ol><ul><li>Git clone <a href="https://git.ffmpeg.org/ffmpeg.git">https://git.ffmpeg.org/ffmpeg.git</a> </li><li>接下来主要讲的也是第二种下载方式</li></ul><hr><h2 id="下载后需要-cd-到-ffmpeg-文件目录中进行操作"><a href="#下载后需要-cd-到-ffmpeg-文件目录中进行操作" class="headerlink" title="下载后需要 cd 到 ffmpeg 文件目录中进行操作"></a>下载后需要 cd 到 ffmpeg 文件目录中进行操作</h2><h4 id="编译过程总共分三步"><a href="#编译过程总共分三步" class="headerlink" title="编译过程总共分三步"></a>编译过程总共分三步</h4><h5 id="第一步：向FFmpeg指定配置信息"><a href="#第一步：向FFmpeg指定配置信息" class="headerlink" title="第一步：向FFmpeg指定配置信息"></a>第一步：向FFmpeg指定配置信息</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/ffmpeg  --enable-ffplay --enable-muxer=mp4 --enable-sdl2 --disable-static --enable-libfdk-aac --enable-libspeex --enable-libx264 --enable-libx265  --enable-gpl --enable-nonfree  --enable-filter=delogo --enable-debug=3 --disable-optimizations  --enable-videotoolbox --enable-shared --enable-pthreads --enable-version3  --enable-hardcoded-tables --cc=clang --host-cflags= --host-ldflags= </span><br><span class="line"></span><br></pre></td></tr></table></figure><p>命令解释</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 指定编译后输出的文件位置</span><br><span class="line">--prefix=/usr/local/ffmpeg</span><br><span class="line"></span><br><span class="line">//  启用ffpaly播放器</span><br><span class="line">--enable-ffplay</span><br></pre></td></tr></table></figure><p>可能会遇到下面这几个 找不到的问题</p><p><img src="error.png"></p><p>找不到 fdk_aac ，终端中执行如下命令; </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install  fdk-aac </span><br><span class="line">// 找不到就用brew install ...</span><br></pre></td></tr></table></figure><p>为避免编译完成后，不能使用ffplay 可以在这里处理一下 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install sdl2</span><br></pre></td></tr></table></figure><p>// 同时需要安装yasm汇编编译工具<br>brew install yasm</p><p>再次执行 ./configure … 命令。</p><h5 id="第二步：终端输入make"><a href="#第二步：终端输入make" class="headerlink" title="第二步：终端输入make"></a>第二步：终端输入make</h5><h5 id="第三步：sudo-make-install"><a href="#第三步：sudo-make-install" class="headerlink" title="第三步：sudo make install"></a>第三步：sudo make install</h5><p>输入密码</p><hr><h3 id="配置环境变量-（M1-芯片的Mac）"><a href="#配置环境变量-（M1-芯片的Mac）" class="headerlink" title="配置环境变量  （M1 芯片的Mac）"></a>配置环境变量  （M1 芯片的Mac）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.zshrc</span><br></pre></td></tr></table></figure><p>增加一行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/usr/local/ffmpeg/bin:$PATH</span><br></pre></td></tr></table></figure><p>wq 保存退出</p><p>重新开启终端 或者 source ~/.zshrc </p><h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zsh: command not found: ffplay</span><br></pre></td></tr></table></figure><p>ffplay 找不到的处理办法 &lt; <a href="https://juejin.cn/post/6862577150420058126&gt;">https://juejin.cn/post/6862577150420058126&gt;</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;M1芯片-Mac-下载安装-FFmpeg&quot;&gt;&lt;a href=&quot;#M1芯片-Mac-下载安装-FFmpeg&quot; class=&quot;headerlink&quot; title=&quot;M1芯片 Mac 下载安装 FFmpeg&quot;&gt;&lt;/a&gt;M1芯片 Mac 下载安装 FFmpeg&lt;/h1&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>ffmpeg</title>

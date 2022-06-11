@@ -19,28 +19,24 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="吃货人生......  ">
-    <meta name="description" content="三种加壳方式 VM  壳 加密 壳 压缩 壳  三种脱壳方式：目前用第三种 Clutch原理：posix_spawnp创建进程然后dump直接生成ipa包在设备，可以说是很方便了。这个是工具在使用的时候大部分应用会出报错，此外生成的包还需要自己拷贝。 dumpdecrypted地址： https:&#x2F;&#x2F;github.com&#x2F;stefanesser&#x2F;dumpdecrypted原理： 通过手动注入然后启">
+    <meta name="description" content="M1芯片 Mac 下载安装 FFmpeg两种下载方式 Homebrew 下载 ，终端输入 brew install  ffmpeg，可参照如下连接方式：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;mjios&#x2F;p&#x2F;14482571.html#4830778 github连接下载 ， 下载地址 https:&#x2F;&#x2F;git.ffmpeg.org&#x2F;ffmpeg.git    Git clone https">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS逆向开发（七）脱壳过程">
-<meta property="og:url" content="https://ethan0616.github.io/Ethan0616.github.io/2022/02/06/reios07/index.html">
+<meta property="og:title" content="FFmpeg安装">
+<meta property="og:url" content="https://ethan0616.github.io/Ethan0616.github.io/2022/06/11/FFmpeg%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="大葱油饼的博客">
-<meta property="og:description" content="三种加壳方式 VM  壳 加密 壳 压缩 壳  三种脱壳方式：目前用第三种 Clutch原理：posix_spawnp创建进程然后dump直接生成ipa包在设备，可以说是很方便了。这个是工具在使用的时候大部分应用会出报错，此外生成的包还需要自己拷贝。 dumpdecrypted地址： https:&#x2F;&#x2F;github.com&#x2F;stefanesser&#x2F;dumpdecrypted原理： 通过手动注入然后启">
+<meta property="og:description" content="M1芯片 Mac 下载安装 FFmpeg两种下载方式 Homebrew 下载 ，终端输入 brew install  ffmpeg，可参照如下连接方式：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;mjios&#x2F;p&#x2F;14482571.html#4830778 github连接下载 ， 下载地址 https:&#x2F;&#x2F;git.ffmpeg.org&#x2F;ffmpeg.git    Git clone https">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://ethan0616.github.io/Ethan0616.github.io/2022/02/06/reios07/%E6%88%AA%E5%B1%8F2022-01-07%20%E4%B8%8B%E5%8D%886.46.37.png">
-<meta property="og:image" content="https://ethan0616.github.io/Ethan0616.github.io/2022/02/06/reios07/classdump.png">
-<meta property="og:image" content="https://ethan0616.github.io/Ethan0616.github.io/2022/02/06/reios07/%E6%88%AA%E5%B1%8F2022-01-07%20%E4%B8%8B%E5%8D%8812.36.27.png">
-<meta property="og:image" content="https://ethan0616.github.io/Ethan0616.github.io/2022/02/06/reios07/%E6%88%AA%E5%B1%8F2022-01-08%20%E4%B8%8B%E5%8D%883.41.34.png">
-<meta property="article:published_time" content="2022-02-06T12:53:30.000Z">
-<meta property="article:modified_time" content="2022-02-06T12:55:29.414Z">
+<meta property="og:image" content="https://ethan0616.github.io/Ethan0616.github.io/2022/06/11/FFmpeg%E5%AE%89%E8%A3%85/error.png">
+<meta property="article:published_time" content="2022-06-10T23:56:39.000Z">
+<meta property="article:modified_time" content="2022-06-11T00:00:04.116Z">
 <meta property="article:author" content="Ethan Wang">
-<meta property="article:tag" content="reios">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ethan0616.github.io/Ethan0616.github.io/2022/02/06/reios07/%E6%88%AA%E5%B1%8F2022-01-07%20%E4%B8%8B%E5%8D%886.46.37.png">
+<meta name="twitter:image" content="https://ethan0616.github.io/Ethan0616.github.io/2022/06/11/FFmpeg%E5%AE%89%E8%A3%85/error.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/Ethan0616.github.io/assets/favicon.ico">
     
-    <title>iOS逆向开发（七）脱壳过程 · Ethan Wang&#39;s Blog</title>
+    <title>FFmpeg安装 · Ethan Wang&#39;s Blog</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -266,7 +262,7 @@
                 <a href="/Ethan0616.github.io/">Ethan Wang&#39;s Blog</a>
             </div>
             <div class="post-title header-element">
-                <a href="#" class="post-name">iOS逆向开发（七）脱壳过程</a>
+                <a href="#" class="post-name">FFmpeg安装</a>
             </div>
         </div>
     
@@ -312,7 +308,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                iOS逆向开发（七）脱壳过程
+                FFmpeg安装
             <!-- 404 -->
             
         </h1>
@@ -329,23 +325,15 @@
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
-                    <div class= post-intro-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="reios">reios</a>
-    
-</div>
-
-                
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">1k</span>Reading time: <span class="post-count reading-time">4 min</span></span>
+                        <span>Word count: <span class="post-count word-count">367</span>Reading time: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2022/02/06</span>
+                    <span class="post-intro-time">2022/06/11</span>
                     <!-- busuanzi -->
                     
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
@@ -500,49 +488,38 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h3 id="三种加壳方式"><a href="#三种加壳方式" class="headerlink" title="三种加壳方式"></a>三种加壳方式</h3><ul>
-<li>VM  壳</li>
-<li>加密 壳</li>
-<li>压缩 壳</li>
-</ul>
-<h3 id="三种脱壳方式：目前用第三种"><a href="#三种脱壳方式：目前用第三种" class="headerlink" title="三种脱壳方式：目前用第三种"></a>三种脱壳方式：目前用第三种</h3><ul>
-<li>Clutch<br>原理：posix_spawnp创建进程然后dump直接生成ipa包在设备，可以说是很方便了。这个是工具在使用的时候大部分应用会出报错，此外生成的包还需要自己拷贝。</li>
-<li>dumpdecrypted<br>地址： <a target="_blank" rel="noopener" href="https://github.com/stefanesser/dumpdecrypted">https://github.com/stefanesser/dumpdecrypted</a><br>原理： 通过手动注入然后启动应用程序在内存进行dump解密后的内存实现砸壳，这种砸壳只能砸主App可执行文件。有动态库不行<br>对于应用程序里面存在framework的情况可以使用conradev的<a target="_blank" rel="noopener" href="https://github.com/conradev/dumpdecrypted">https://github.com/conradev/dumpdecrypted</a>，通过_dyld_register_func_for_add_image注册回调对每个模块进行dump解密。</li>
-<li>Frida-ios-dump 会被越狱检测出，直接闪退。</li>
-<li>手动脱壳 </li>
-<li>CrackerXI: iOS12 目前没法用dumpdecrypt、Clutch破壳。可以在cydia中直接安装CrackerXI+来破壳，更加方便快捷<br>CrackerXI使用地址:<a target="_blank" rel="noopener" href="https://my.oschina.net/u/4624620/blog/4538834">https://my.oschina.net/u/4624620/blog/4538834</a></li>
-</ul>
-<h3 id="前期准备："><a href="#前期准备：" class="headerlink" title="前期准备："></a>前期准备：</h3><ol>
-<li>手机越狱<br>iphone7 iOS14.5 非完美越狱<br>checkra1n 官网下载，<br>我是开启vpn开始的设置，不知道有没有影响。<br>进入uncOver 显示包内容 进入后 cd到终端<br>./checkra1n -c<br>勾选所有 显示上会有-v<br>错误不用管，等待就行。<br>视频地址：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14T4y1F7kr/">https://www.bilibili.com/video/BV14T4y1F7kr/</a></li>
-<li>安装手机越狱插件</li>
+        <h1 id="M1芯片-Mac-下载安装-FFmpeg"><a href="#M1芯片-Mac-下载安装-FFmpeg" class="headerlink" title="M1芯片 Mac 下载安装 FFmpeg"></a>M1芯片 Mac 下载安装 FFmpeg</h1><h3 id="两种下载方式"><a href="#两种下载方式" class="headerlink" title="两种下载方式"></a>两种下载方式</h3><ol>
+<li>Homebrew 下载 ，终端输入 brew install  ffmpeg，可参照如下连接方式：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/mjios/p/14482571.html#4830778">https://www.cnblogs.com/mjios/p/14482571.html#4830778</a></li>
+<li>github连接下载 ， 下载地址 <a target="_blank" rel="noopener" href="https://git.ffmpeg.org/ffmpeg.git">https://git.ffmpeg.org/ffmpeg.git</a> </li>
 </ol>
 <ul>
-<li>AppleFileConduit “2” (ifunbox 沙盒查看目录用)</li>
-<li>OpenSSH  (wifi连接用,需要手动修改密码，看工具篇)</li>
+<li>Git clone <a target="_blank" rel="noopener" href="https://git.ffmpeg.org/ffmpeg.git">https://git.ffmpeg.org/ffmpeg.git</a> </li>
+<li>接下来主要讲的也是第二种下载方式</li>
 </ul>
-<h1 id="一、Clutch-脱壳"><a href="#一、Clutch-脱壳" class="headerlink" title="一、Clutch 脱壳"></a>一、Clutch 脱壳</h1><p>Clutch: <a target="_blank" rel="noopener" href="https://github.com/KJCracks/Clutch/releases/tag/2.0.4">https://github.com/KJCracks/Clutch/releases/tag/2.0.4</a><br>下载后去掉版本号 拖入手机/usr/bin目录</p>
-<p>可执行权限不足<br><img src="%E6%88%AA%E5%B1%8F2022-01-07%20%E4%B8%8B%E5%8D%886.46.37.png"><br>chmod +x /usr/bin/Clutch</p>
-<p>命令：Clutch -i  ，查询当前可脱壳应用，只显示未脱壳。<br>Clutch -d  加数组</p>
-<h1 id="二、dumpdecrypted-脱壳"><a href="#二、dumpdecrypted-脱壳" class="headerlink" title="二、dumpdecrypted 脱壳"></a>二、dumpdecrypted 脱壳</h1><p><img src="classdump.png"></p>
-<ol>
-<li>下载 dumpdecrypted<br> 下载地址： <a target="_blank" rel="noopener" href="https://github.com/stefanesser/dumpdecrypted">https://github.com/stefanesser/dumpdecrypted</a><br> make编译出 dumpdecrypted.dylib 文件</li>
-<li>将 dumpdecrypted.dylib 文件导入到手机的/var/root目录 （越狱设备root权限）ifunbox 工具拖入 ，注意：如果链接两台设备 ifunbox失效</li>
-<li>修改环境变量 DYLD_INSERT_LIBRARIES<br> 运行程序，输入 ps -A | grep 程序名称  找到进程id<br> cycript -p 6183 可进入调试，这里不需要调试，只需要目录路径。也可以进入后用mj的cycript工具找到路径<br> ps后路径为：<br>  6183 ??         0:00.00 /var/containers/Bundle/Application/E7039FC4-15B2-4EF0-8C16-878C04E34504/smoba.app/smoba<br>  修改环境变量：<br>  DYLD_INSERT_LIBRARIES=dumpdecrypted.dylib /var/containers/Bundle/Application/E7039FC4-15B2-4EF0-8C16-878C04E34504/smoba.app/smoba</li>
-<li>执行 DYLD_INSERT_LIBRARIES=dumpdecrypted.dylib /var/containers/Bundle/Application/E7039FC4-15B2-4EF0-8C16-878C04E34504/smoba.app/smoba  注意：var 前有/</li>
-<li>查询是否已脱壳 otool -l smoba.decrypted | grep crypt<br> cryptid 0 代表已脱壳</li>
-</ol>
-<p>查看BundleID<br>cat /var/containers/Bundle/Application/E7039FC4-15B2-4EF0-8C16-878C04E34504/smoba.app/Info.plist | grep CFBundleIdentifier -A 1<br>iOS10 以上需要重新签名 才能加载。</p>
-<p>以上为旧版本脱壳<br>新版本脱壳参考 <a target="_blank" rel="noopener" href="https://bbs.pediy.com/thread-263907.htm">https://bbs.pediy.com/thread-263907.htm</a></p>
-<p>su mobile 切换到 mobile权限</p>
-<p>找不到文件<br><img src="%E6%88%AA%E5%B1%8F2022-01-07%20%E4%B8%8B%E5%8D%8812.36.27.png"></p>
-<p>重签名：</p>
-<h2 id="列出可签名证书"><a href="#列出可签名证书" class="headerlink" title="列出可签名证书"></a>列出可签名证书</h2><p>security find-identity -v -p codesigning</p>
-<h2 id="为dumpecrypted-dylib签名"><a href="#为dumpecrypted-dylib签名" class="headerlink" title="为dumpecrypted.dylib签名"></a>为dumpecrypted.dylib签名</h2><p>codesign –force –verify –verbose –sign “iPhone Developer: xxx xxxx (xxxxxxxxxx)” dumpdecrypted.dylib</p>
-<p>其他总结：<br>最后su mobile，脱壳成功。我也是Meridian越狱，iPhone5s iOS10.3.2。<br>总结一下：<br>1、编译出dumpdecrypted.dylib，并且签名好。<br>2、将dumpdecrypted.dylib放到手机/usr/lib目录。<br>3、找到要脱壳应用的Documents路径，cd到Documents下。<br>4、su mobile切换到mobile用户。<br>5、DYLD_INSERT_LIBRARIES=/usr/lib/dumpdecrypted.dylib /var/containers/Bundle/Application/1F4B0FA7-4D39-4BA4-A563-E56B679975FB/XXXXXX.app/XXXXXX<br>正常就会脱壳成功了<br><a target="_blank" rel="noopener" href="https://iosre.com/t/ios-10-2-dumpdecrypted-file-system-sandbox-blocked-mmap-abort-trap-6/13878/8">https://iosre.com/t/ios-10-2-dumpdecrypted-file-system-sandbox-blocked-mmap-abort-trap-6/13878/8</a></p>
-<h1 id="三、Frida-ios-dump-一键砸壳"><a href="#三、Frida-ios-dump-一键砸壳" class="headerlink" title="三、Frida-ios-dump 一键砸壳"></a>三、Frida-ios-dump 一键砸壳</h1><p>cydia添加软件源<a target="_blank" rel="noopener" href="https://build.frida.re/">https://build.frida.re/</a><br>安装Frida</p>
-<p>电脑配置参考文章<br>缺什么 model 就单独安装<br><a target="_blank" rel="noopener" href="https://iosre.com/t/frida-ios-dump/11640">https://iosre.com/t/frida-ios-dump/11640</a><br><a target="_blank" rel="noopener" href="https://iosre.com/t/topic/10890">https://iosre.com/t/topic/10890</a><br>下载后需要手动配置端口号及iphone密码，在dump.py文件中。<br>iproxy 10010 22  开启监听<br>由于Mac设备不兼容 这里指定用python3 ,在Frida-ios-dump目录中<br>python3 ./dump.py -l 查看手机中的应用名称及 bundleid<br>sudo python3 ./dump.py 包名/名称<br>执行完会解压到当前目录。</p>
-<p>加sudo<br><img src="%E6%88%AA%E5%B1%8F2022-01-08%20%E4%B8%8B%E5%8D%883.41.34.png"></p>
-<h1 id="四、手动脱壳"><a href="#四、手动脱壳" class="headerlink" title="四、手动脱壳"></a>四、手动脱壳</h1><p><a target="_blank" rel="noopener" href="https://iosre.com/t/lldb/8603">https://iosre.com/t/lldb/8603</a></p>
+<hr>
+<h2 id="下载后需要-cd-到-ffmpeg-文件目录中进行操作"><a href="#下载后需要-cd-到-ffmpeg-文件目录中进行操作" class="headerlink" title="下载后需要 cd 到 ffmpeg 文件目录中进行操作"></a>下载后需要 cd 到 ffmpeg 文件目录中进行操作</h2><h4 id="编译过程总共分三步"><a href="#编译过程总共分三步" class="headerlink" title="编译过程总共分三步"></a>编译过程总共分三步</h4><h5 id="第一步：向FFmpeg指定配置信息"><a href="#第一步：向FFmpeg指定配置信息" class="headerlink" title="第一步：向FFmpeg指定配置信息"></a>第一步：向FFmpeg指定配置信息</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/ffmpeg  --enable-ffplay --enable-muxer=mp4 --enable-sdl2 --disable-static --enable-libfdk-aac --enable-libspeex --enable-libx264 --enable-libx265  --enable-gpl --enable-nonfree  --enable-filter=delogo --enable-debug=3 --disable-optimizations  --enable-videotoolbox --enable-shared --enable-pthreads --enable-version3  --enable-hardcoded-tables --cc=clang --host-cflags= --host-ldflags= </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>命令解释</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 指定编译后输出的文件位置</span><br><span class="line">--prefix=/usr/local/ffmpeg</span><br><span class="line"></span><br><span class="line">//  启用ffpaly播放器</span><br><span class="line">--enable-ffplay</span><br></pre></td></tr></table></figure>
+<p>可能会遇到下面这几个 找不到的问题</p>
+<p><img src="error.png"></p>
+<p>找不到 fdk_aac ，终端中执行如下命令; </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install  fdk-aac </span><br><span class="line">// 找不到就用brew install ...</span><br></pre></td></tr></table></figure>
+
+<p>为避免编译完成后，不能使用ffplay 可以在这里处理一下 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install sdl2</span><br></pre></td></tr></table></figure>
+
+<p>// 同时需要安装yasm汇编编译工具<br>brew install yasm</p>
+<p>再次执行 ./configure … 命令。</p>
+<h5 id="第二步：终端输入make"><a href="#第二步：终端输入make" class="headerlink" title="第二步：终端输入make"></a>第二步：终端输入make</h5><h5 id="第三步：sudo-make-install"><a href="#第三步：sudo-make-install" class="headerlink" title="第三步：sudo make install"></a>第三步：sudo make install</h5><p>输入密码</p>
+<hr>
+<h3 id="配置环境变量-（M1-芯片的Mac）"><a href="#配置环境变量-（M1-芯片的Mac）" class="headerlink" title="配置环境变量  （M1 芯片的Mac）"></a>配置环境变量  （M1 芯片的Mac）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.zshrc</span><br></pre></td></tr></table></figure>
+<p>增加一行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/usr/local/ffmpeg/bin:$PATH</span><br></pre></td></tr></table></figure>
+<p>wq 保存退出</p>
+<p>重新开启终端 或者 source ~/.zshrc </p>
+<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zsh: command not found: ffplay</span><br></pre></td></tr></table></figure>
+<p>ffplay 找不到的处理办法 &lt; <a target="_blank" rel="noopener" href="https://juejin.cn/post/6862577150420058126&gt;">https://juejin.cn/post/6862577150420058126&gt;</a></p>
 
     </article>
     <!-- license -->
@@ -551,17 +528,12 @@
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/Ethan0616.github.io/2022/02/06/reios08/" title="iOS逆向开发（八）LLDB 动态调试">
-                    <div class="nextTitle">iOS逆向开发（八）LLDB 动态调试</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/Ethan0616.github.io/2022/02/06/reios06/" title="iOS逆向开发（六）Theos 使用">
-                    <div class="prevTitle">iOS逆向开发（六）Theos 使用</div>
+                <a href="/Ethan0616.github.io/2022/06/11/ffmpeg/" title="ffmpeg">
+                    <div class="prevTitle">ffmpeg</div>
                 </a>
             
         </li>
@@ -705,7 +677,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E5%8A%A0%E5%A3%B3%E6%96%B9%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">三种加壳方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E8%84%B1%E5%A3%B3%E6%96%B9%E5%BC%8F%EF%BC%9A%E7%9B%AE%E5%89%8D%E7%94%A8%E7%AC%AC%E4%B8%89%E7%A7%8D"><span class="toc-number">2.</span> <span class="toc-text">三种脱壳方式：目前用第三种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">前期准备：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81Clutch-%E8%84%B1%E5%A3%B3"><span class="toc-number"></span> <span class="toc-text">一、Clutch 脱壳</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81dumpdecrypted-%E8%84%B1%E5%A3%B3"><span class="toc-number"></span> <span class="toc-text">二、dumpdecrypted 脱壳</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E5%8F%AF%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6"><span class="toc-number"></span> <span class="toc-text">列出可签名证书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BAdumpecrypted-dylib%E7%AD%BE%E5%90%8D"><span class="toc-number"></span> <span class="toc-text">为dumpecrypted.dylib签名</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81Frida-ios-dump-%E4%B8%80%E9%94%AE%E7%A0%B8%E5%A3%B3"><span class="toc-number"></span> <span class="toc-text">三、Frida-ios-dump 一键砸壳</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%89%8B%E5%8A%A8%E8%84%B1%E5%A3%B3"><span class="toc-number"></span> <span class="toc-text">四、手动脱壳</span></a>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#M1%E8%8A%AF%E7%89%87-Mac-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85-FFmpeg"><span class="toc-number">1.</span> <span class="toc-text">M1芯片 Mac 下载安装 FFmpeg</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E4%B8%8B%E8%BD%BD%E6%96%B9%E5%BC%8F"><span class="toc-number">1.0.1.</span> <span class="toc-text">两种下载方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%90%8E%E9%9C%80%E8%A6%81-cd-%E5%88%B0-ffmpeg-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E4%B8%AD%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.</span> <span class="toc-text">下载后需要 cd 到 ffmpeg 文件目录中进行操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E6%80%BB%E5%85%B1%E5%88%86%E4%B8%89%E6%AD%A5"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">编译过程总共分三步</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%90%91FFmpeg%E6%8C%87%E5%AE%9A%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="toc-number">1.1.0.1.1.</span> <span class="toc-text">第一步：向FFmpeg指定配置信息</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E7%BB%88%E7%AB%AF%E8%BE%93%E5%85%A5make"><span class="toc-number">1.1.0.1.2.</span> <span class="toc-text">第二步：终端输入make</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9Asudo-make-install"><span class="toc-number">1.1.0.1.3.</span> <span class="toc-text">第三步：sudo make install</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F-%EF%BC%88M1-%E8%8A%AF%E7%89%87%E7%9A%84Mac%EF%BC%89"><span class="toc-number">1.1.1.</span> <span class="toc-text">配置环境变量  （M1 芯片的Mac）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">1.1.1.0.1.</span> <span class="toc-text">参考</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->
