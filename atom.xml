@@ -6,7 +6,7 @@
   <link href="https://ethan0616.github.io/Ethan0616.github.io/atom.xml" rel="self"/>
   
   <link href="https://ethan0616.github.io/Ethan0616.github.io/"/>
-  <updated>2022-06-11T00:00:04.116Z</updated>
+  <updated>2022-08-03T04:12:43.761Z</updated>
   <id>https://ethan0616.github.io/Ethan0616.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>APP启动阶段</title>
+    <link href="https://ethan0616.github.io/Ethan0616.github.io/2022/08/03/appStart/"/>
+    <id>https://ethan0616.github.io/Ethan0616.github.io/2022/08/03/appStart/</id>
+    <published>2022-08-03T04:10:09.000Z</published>
+    <updated>2022-08-03T04:12:43.761Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="iOS知识体系整理（启动篇）"><a href="#iOS知识体系整理（启动篇）" class="headerlink" title="iOS知识体系整理（启动篇）"></a>iOS知识体系整理（启动篇）</h1><h3 id="APP冷启动过程："><a href="#APP冷启动过程：" class="headerlink" title="APP冷启动过程："></a>APP冷启动过程：</h3><p><img src="%E5%86%B7%E5%90%AF%E5%8A%A8%E9%98%B6%E6%AE%B5.png" alt="冷启动阶段"></p><h4 id="上图将启动分为三个阶段："><a href="#上图将启动分为三个阶段：" class="headerlink" title="上图将启动分为三个阶段："></a>上图将启动分为三个阶段：</h4><h5 id="第一阶段：-加载可执行文件到内存中-dyld阶段"><a href="#第一阶段：-加载可执行文件到内存中-dyld阶段" class="headerlink" title="第一阶段： 加载可执行文件到内存中(dyld阶段)"></a>第一阶段： 加载可执行文件到内存中(dyld阶段)</h5><ol><li>加载Dyld，Dylibs 通过MachOView查看ipa包中的可执行文件，在LoadCommands中查看到所有需要加载后缀为.dylib的文件。如下图：<br>![截屏2022-08-03 11.33.29](截屏2022-08-03 11.33.29.png)</li></ol><p>扩展：非越狱设备注入也是通过修改LoadCommands注册表中的的.dylib后重签名后实现的</p><ol start="2"><li>Rebase：在Image内部调整指针的指向。ASLR内存起始点，加上一端地址，Rebase就是将这指针加上这段距离，找到真实地址。可以在xcode运行程序，在lldb中输入：image list -f -o 第一行中可以看到具体的进程加载到内存中的偏移量<br><img src="16594978944029.jpg"></li></ol><p>解释：ASLR（Address Space Layout Randomization），地址空间布局随机化。在ASLR技术出现之前，程序都是在固定的地址加载的，这样hacker可以知道程序里面某个函数的具体地址，植入某些恶意代码，修改函数的地址等，带来了很多的危险性。ASLR就是为了解决这个的，程序每次启动后地址都会随机变化，这样程序里所有的代码地址都需要需要重新对进行计算修复才能正常访问。rebasing这一步主要就是调整镜像内部指针的指向。</p><ol start="3"><li>Bind: 将指针指向镜像外部的内容。指向外部的指针被符号(symbol)名称绑定，dyld需要去符号表里查找，找到symbol对应的实现。</li></ol><p>-</p><h5 id="第二阶段：Run-Image-Initlalizers-ObjC-setup-time阶段"><a href="#第二阶段：Run-Image-Initlalizers-ObjC-setup-time阶段" class="headerlink" title="第二阶段：Run Image Initlalizers (ObjC setup time阶段)"></a>第二阶段：Run Image Initlalizers (ObjC setup time阶段)</h5><ol><li>class load() 、category load()：dyld调用的objc_init方法，这个是runtime的初始化方法，在这个方法里面主要的操作就是加载类（对需要的class和category进行注册）</li><li>objc_init方法通过内部的_dyld_objc_notify_register向dyld注册了一个通知事件，当有新的image（程序中对应实例可简称为image，如程序可执行文件macho，Framework，bundle等）加载到内存的时候，就会触发load_images方法，这个方法里面就是加载对应image里面的类，并调用load方法（在下一阶段initializer）</li><li>如果有继承的类，那么会先调用父类的load方法，然后调用子类的，但是在load里面不能调用[super load]。最后才是调用category的load方法。总之，所有的load都会被调用到（注意：子</li><li><em>attribute</em>((constructor)) C++ generates initializer for static allocated objects</li></ol><p>-</p><h5 id="第三阶段：main"><a href="#第三阶段：main" class="headerlink" title="第三阶段：main"></a>第三阶段：main</h5><p>依次：main() -&gt; UIApplicationMain() -&gt; WillFinishLaunch()</p><ul><li><h3 id="文章参考："><a href="#文章参考：" class="headerlink" title="文章参考："></a>文章参考：</h3></li></ul><ul><li>掘金 <a href="https://juejin.cn/post/6951591401528229895">https://juejin.cn/post/6951591401528229895</a></li><li>美团技术团队优化启动 <a href="https://tech.meituan.com/2018/12/06/waimai-ios-optimizing-startup.html">https://tech.meituan.com/2018/12/06/waimai-ios-optimizing-startup.html</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;iOS知识体系整理（启动篇）&quot;&gt;&lt;a href=&quot;#iOS知识体系整理（启动篇）&quot; class=&quot;headerlink&quot; title=&quot;iOS知识体系整理（启动篇）&quot;&gt;&lt;/a&gt;iOS知识体系整理（启动篇）&lt;/h1&gt;&lt;h3 id=&quot;APP冷启动过程：&quot;&gt;&lt;a hre</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>FFmpeg安装</title>

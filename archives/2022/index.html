@@ -431,6 +431,39 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Ethan0616.github.io/2022/08/03/appStart/">
+                
+                <span class="abstract-title-text">APP启动阶段</span>
+            </a>
+            <div class="abstract-content">
+                iOS知识体系整理（启动篇）APP冷启动过程：
+上图将启动分为三个阶段：第一阶段： 加载可执行文件到内存中(dyld阶段)
+加载Dyld，Dylibs 通过MachOView查看ipa包中的可执行文件，在LoadCommands中查看到所有需要加载后缀为.dylib的文件。如下图：![截屏2022-08-03 11.33.29](截屏2022-08-03 11.33.29.png)
+
+扩展：非越狱设备注入也是通过修改LoadCommands注册表中的的.dylib后重签名后实现的
+
+Rebase：在Image内部调整指针的指向。ASLR内存起始点，加上一端地址，Rebase就是将这指针加...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/08/03">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/08/03</span>
+                </div>
+                <!-- tags -->
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Ethan0616.github.io/2022/06/11/FFmpeg%E5%AE%89%E8%A3%85/">
                 
                 <span class="abstract-title-text">FFmpeg安装</span>
@@ -786,49 +819,11 @@ b ...
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Ethan0616.github.io/2022/02/06/reios01/">
-                
-                <span class="abstract-title-text">iOS逆向开发（一）修改进程内存</span>
-            </a>
-            <div class="abstract-content">
-                1. 原理当执行文件由操作系统运行时，就成为一个进程。实际上可执行文件和处理同一个对象的不同状态，即一些数据和一组指令。我们可以将可执行文件视为静态，将进程视为动态。可执行文件在硬盘上，而进程“存储”在内存中。所以，进程包含数据和指令它们在内存中。
-
-优点： 能够及时反馈修改情况
-缺点： 不能保存修改信息，应用重新加载后修改消失
-
-
-2. 虚拟内存、内存页和内存区域当操作系统执行一个可执行文件时，它会将这个可执行文件从硬盘加载到内存中。这个进程在内存中的哪个位置？
-每个进程都有自己独立的内存空间（即进程A与B运行在不同的内存区域），这是通过内存虚拟化来实现的。大部分操作系统都是基于虚拟内...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/02/06">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/02/06</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="reios">reios</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
+    
+        <nav class="page-nav">
+            <span class="page-number current">1</span><a class="page-number" href="/Ethan0616.github.io/archives/2022/page/2/">2</a><a class="extend next" rel="next" href="/Ethan0616.github.io/archives/2022/page/2/">NEXT &gt;</a>
+        </nav>
     
 </main>
 
@@ -985,7 +980,20 @@ b ...
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1040,7 +1048,7 @@ b ...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 10
+        Total : 11
         </div>
         <!-- search  -->
         
@@ -1054,6 +1062,12 @@ b ...
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/03</span>
+            <a class="archive-post-title" href="/Ethan0616.github.io/2022/08/03/appStart/">APP启动阶段</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/11</span>
